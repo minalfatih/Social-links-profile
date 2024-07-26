@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+body {
+  background-color: var(--Off-Black);
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+main {
+  background-color: var(--Dark-Grey);
+  width: 400px;
+  border-radius: 10px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  main {
+    width: 350px;
+  }
+}
+section img {
+  border-radius: 50%;
+  width: 80px;
+}
+section div h2 {
+  color: var(--White);
+  margin-bottom: 10px;
+}
+section div p {
+  color: var(--Green);
+  font-weight: bold;
+}
+section p {
+  color: var(--White);
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0 10px 0;
+}
+.links a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--White);
+  font-weight: bold;
+  background-color: var(--Grey);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+.links a:hover {
+  cursor: pointer;
+  background-color: var(--Green);
+  color: var(--Off-Black);
+  transition: 1s;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+  position: absolute;
+  width: 100%;
+  bottom: -50px;
+  left: 0;
+}
+.attribution a {
+  color: var(--Green);
+}
